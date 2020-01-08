@@ -23,7 +23,8 @@ jobs:
   include:
     - os: linux
       rbenv: ruby-2.1.0
+      script: bats tests-1.sh
     - os: linux
       rbenv: ruby-2.7.0
-
+      script: bats tests-2.sh
       
