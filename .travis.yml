@@ -3,10 +3,6 @@ language: ruby
 os:
   - linux
 
-rvm:
-  - 2.0
-  - 2.7.0
-
 rbenv:
   - ruby-2.1.0
   - ruby-2.7.0
@@ -17,7 +13,17 @@ before_install:
   - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo apt-get install -qq bats; fi
 
 script:
-  - bats tests.sh
   - ruby -v
   - RBENV_VERSION=2.1.0 ruby -v
   - RBENV_VERSION=2.7.0 ruby -v
+  - bats tests.sh
+
+
+jobs:
+  include:
+    - os: linux
+      rbenv: ruby-2.1.0
+    - os: linux
+      rbenv: ruby-2.7.0
+
+      
