@@ -4,6 +4,7 @@ os:
 
 rvm:
   - 2.0
+  - 2.7.0
 
 before_install:
   - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo add-apt-repository ppa:duggan/bats --yes; fi
