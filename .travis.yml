@@ -1,12 +1,5 @@
 language: ruby
 
-os:
-  - linux
-
-rbenv:
-  - ruby-2.1.0
-  - ruby-2.7.0
-
 before_install:
   - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo add-apt-repository ppa:duggan/bats --yes; fi
   - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo apt-get update -qq; fi
